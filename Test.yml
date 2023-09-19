@@ -2,9 +2,10 @@
 # this is a simple playbook with two plas
 
 - name: first play 
-  hosts: database_dev
+  hosts: all
   tasks:
     - name: first task intsall 2 packages
-        ansible.builtin.dnf:
-        name: httpd
-    - name: second task start MariaDB servic
+      ansible.builtin.dnf:
+        name: 
+          - mariadb-server
+        state: latest
