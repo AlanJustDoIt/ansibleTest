@@ -2,7 +2,8 @@
 # this is a simple playbook with two plas
 
 - name: first play 
-  hosts: host:all
+  hosts: all
+  become: true
   tasks:
     - name: first task intsall 2 packages
       ansible.builtin.dnf:
