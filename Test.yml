@@ -1,1 +1,10 @@
-Teask
+---
+# this is a simple playbook with two plas
+
+- name: first play 
+  hosts: database_dev
+  tasks:
+    - name: first task intsall 2 packages
+        ansible.builtin.dnf:
+        name: httpd
+    - name: second task start MariaDB servic
